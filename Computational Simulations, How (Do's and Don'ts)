@@ -1,0 +1,53 @@
+Why Comp Modeling and simulation?
+Do's and Don'ts
+
+"Computer science will be for biology what mathematics is for physics."
+    Simulation =/= Numerical Solution
+    
+- in/outflow can be an input/output, but there can be other kinds.
+
+Experiment: process of extracting data from a system. 2 types:
+1) observing the system inputs/outputs (observation)
+2) exciting/changing th system inputs (perturbation)
+(not all inputs are controllable / not all outputs observatble)
+
+Cannot say "I'm aking a model of blank", more accurate would be to say I'm making a 
+model as observed by ______ (e.g. fluoresence tagging, live cell imaging
+----> All models have a finite experimental frame. 
+
+Shouldn't experimental methodologies or the parameters that we take from them faithfully represent our variables of interest in a way that is generalizable to all other experimental methodlogies. 
+
+
+Computer simulations =/= is not theory (computational experiments...only bsaed on theory)
+--> careful that simulation does not violate experimental frame - usually won't notice it, dislike experimental. 
+
+
+
+
+Exp --> Data Analysi --> Model --> Simulation --> Prediction --> Comparison <-- Exp
+
+
+Simulation: is model *sufficient* to explain data. 
+(sufficient in both ingredients & interaction mechanisms)
+
+
+Perturbation Experiment is a predicted mechanism *necessary*? (knock-out experiment)
+Note: reconstitutions experiments show sufficiency of ingredients, but not of interaction mechanisms - plant grows from seed w/o describing mechanisms; ATP, br2, etc. are needed but in comp sim u can say: attractive force of ATP to br2 and given hydorlysis rate...
+
+"Necessary" requires perturbation experiments (can only show sufficiency with reconstitution)
+..."This mechanism is sufficient to demonstrate the observed results"
+
+Ockham's razor
+The simplest model that is sufficient ot explain the data is the one that should be used (i.e., from which we can learn the most)
+
+Validation of model (check byproduct observables and use Ockham's razor within)
+
+1/4 of wolves eating a rabbit and 25% of a wolf eating a rabbit is different only if your system if it is not Ergodic:
+Ergodic: In probability theory, an ergodic dynamical system is one that, broadly speaking, has the same behavior averaged over time as averaged over the space of all the system's states in its phase space.
+
+--> Specify desired accuracy
+--> Start with simplest model possible.
+--> Choosen the most efficient simulation algorithm and the best implementation (start with C++ etc. if there's ANY chance you will have to scale it up...you'll think you prototype it somewhere first but it tends to grow out of wherever you start it so...)
+
+Aim for "complete" or "correct" models. Accept that models are (deliberately) wrong --> if you validate results, you have a paper; if not, you have a discovery.
+
